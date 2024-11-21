@@ -28,14 +28,13 @@ const ItemListContainer = ({mensaje, funcion}) => {
       .catch(rej => console.error(rej))
       .finally(() => setCargando(false))}
   
-  }, [decada]) //el hooke useEffect con array de dependencia vacío hace que solo se ejecute cuando el componente se monta (efecto de montaje)
+  }, [decada])
   
+
   const changeDecada = (ano) => {
     setDecada(ano)
   }
-
-  console.log("decada: ", decada)
-
+  
   return (
     <>
     <div>
@@ -50,7 +49,7 @@ const ItemListContainer = ({mensaje, funcion}) => {
         <Button funcion={() => changeDecada(1990)} text="1990-2000"/> 
         <Button funcion={() => changeDecada(2000)} text="2000-2010"/> 
         <Button funcion={() => changeDecada(2010)} text="2010-2020"/> 
-        <Button funcion={() => changeDecada()} text="Todos"/> 
+        <Button funcion={() => changeDecada("")} text="Todos"/> 
       </div>
 
       {

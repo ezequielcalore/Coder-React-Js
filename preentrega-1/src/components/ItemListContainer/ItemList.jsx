@@ -5,13 +5,13 @@ const ItemList = ({products}) => {
   
 return (
     <div>
-        {products.map( (elemento) => {
+        {products.map ((elemento) => {
             return(
-                <Item elemento={elemento} key={elemento.titulo}/>
+                <Item elemento={elemento} key={elemento.id}/>
             )}
-        )}
+            )
+        }    
     </div>
   )
 }
-
 export default ItemList
