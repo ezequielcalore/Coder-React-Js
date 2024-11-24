@@ -1,12 +1,25 @@
+import {Link} from 'react-router-dom'
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import { AiFillHome } from "react-icons/ai";
 
-const NavBar = ({valor}) => {
+const NavBar = () => {
   return (
-    <div>
-        <h1> Vinilos de Rock Nacional </h1>
-        <CartWidget valor={valor}/>
-    </div>
+    <>
+    <nav>
+    <button>
+      <Link to={'/'}>
+        <AiFillHome />
+      </Link>
+    </button>
+    <button>
+      <Link to={'/products'}> Products </Link>
+    </button>
+    <button>
+      <Link to={'/contact'}> Contact </Link>
+    </button>
+    </nav>
+   </>
   )
 }
 

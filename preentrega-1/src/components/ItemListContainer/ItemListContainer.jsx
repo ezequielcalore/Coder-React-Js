@@ -5,7 +5,7 @@ import { useState } from "react"
 import { getProducts, getProductsByDecada } from '../../data/backend_falso'
 
 
-const ItemListContainer = ({mensaje, funcion}) => {
+const ItemListContainer = ({funcion}) => {
 
   const [products, setProducts] = useState([])
   const [decada, setDecada] = useState("")
@@ -37,10 +37,6 @@ const ItemListContainer = ({mensaje, funcion}) => {
   
   return (
     <>
-    <div>
-    <div> {mensaje} </div>
-    <Button funcion={funcion} text="Agregar al carrito"/>
-    </div>
 
     <div>
       <div>
